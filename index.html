@@ -244,12 +244,13 @@ const APP_URL="https://lavoie06.github.io/epicerie-1fbb642e/";// URL publique de
 async function shareApp(){const u=APP_URL||(/^https?:/.test(location.href)?location.href.split("#")[0]:"");if(u){if(navigator.share){try{await navigator.share({title:"Notre épicerie",url:u});return}catch(e){if(e.name==="AbortError")return}}return copyT(u,"Lien copié ♡")}
 const f=new File([SRC],"epicerie.html",{type:"text/html"});if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:"Notre épicerie"});return}catch(e){if(e.name==="AbortError")return}}
 const a=document.createElement("a");a.href=URL.createObjectURL(f);a.download="epicerie.html";a.click();toast("Fichier téléchargé")}
-const EMAIL="";// adresse courriel de Renel pour les notes (à remplir)
+const EMAIL="laboucherierenel@mail.grokbot.com";// adresse courriel de Renel pour les notes (à remplir)
 function rN(){return `<section class="card" style="padding:22px"><div class="sl">Pour Renel</div><p class="q" style="margin:6px 0 14px">Ce qui accroche : formats, quantités, repas à changer…</p><textarea id="nt" placeholder="Ex. : j'ai pris un paquet de 30 œufs, 2 de X ça fait pas de sens…" oninput="S.notes=this.value;save()">${(S.notes||"").replace(/</g,"&lt;")}</textarea></section>
 ${EMAIL?'<button type="button" class="btn main" onclick="mailNotes()">Envoyer mes notes à Renel</button>':""}<button type="button" class="btn${EMAIL?"":" main"}" onclick="shareNotes()">Partager les notes</button>`}
 function notesBody(){return `${S.notes||"(aucune note)"}\n\n— Envoyé le ${new Date().toLocaleString("fr-CA")}\n\nMenu courant :\n${S.menu.map((id,d)=>DAYS[d]+" : "+byId(id).n).join("\n")}`}
 const NSUBJ="Notes épicerie – semaine du 26 oct.";
-function mailNotes(){location.href=`mailto:${EMAIL}?subject=${encodeURIComponent(NSUBJ)}&body=${encodeURIComponent(notesBody())}`}
+function mailURL(){let b=notesBody().replace(/\r?\n/g,"\r\n");const MAX=1800;if(encodeURIComponent(b).length>MAX){while(encodeURIComponent(b).length>MAX-60)b=b.slice(0,-50);b+="…\r\n(notes coupées : utilise « Partager les notes » pour le texte complet)"}return `mailto:${EMAIL}?subject=${encodeURIComponent(NSUBJ)}&body=${encodeURIComponent(b)}`}
+function mailNotes(){location.href=mailURL()}
 async function shareNotes(){const t=NSUBJ+"\n\n"+notesBody();if(navigator.share){try{await navigator.share({title:NSUBJ,text:t});return}catch(e){if(e.name==="AbortError")return}}copyT(t,"Notes copiées ♡")}
 function pk(k){S.prep=S.prep||{};S.prep[k]=!S.prep[k];save();draw()}
 function draw(){if(S.tab==="n"&&document.getElementById("nt"))return;document.body.classList.toggle("shopm",!!(S.shop&&S.tab==="e"));document.getElementById("m").innerHTML=S.tab==="e"?(S.shop?rShop():rE()):S.tab==="p"?rP():S.tab==="n"?rN():rM();document.getElementById("ti").textContent=S.tab==="e"?"Épicerie":S.tab==="p"?"Prép du dimanche":S.tab==="n"?"Notes":"Menus";t4.classList.toggle("on",S.tab==="n");t3.classList.toggle("on",S.tab==="p");t1.classList.toggle("on",S.tab==="e");t2.classList.toggle("on",S.tab==="m")}
