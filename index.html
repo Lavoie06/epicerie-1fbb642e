@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="fr-CA"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Notre épicerie ♡</title>
+<meta name="theme-color" content="#fbf6f3" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#221c1e" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Épicerie"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%23f6e3e1'/%3E%3Cpath d='M55 70h70l-8 58a10 10 0 0 1-10 9H73a10 10 0 0 1-10-9z' fill='%23d99a9a'/%3E%3Cpath d='M72 70c0-14 8-24 18-24s18 10 18 24' fill='none' stroke='%23b97878' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M90 92c6-8 18-4 14 6-3 6-14 13-14 13s-11-7-14-13c-4-10 8-14 14-6z' fill='%23fff'/%3E%3C/svg%3E"><link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%23f6e3e1'/%3E%3Cpath d='M55 70h70l-8 58a10 10 0 0 1-10 9H73a10 10 0 0 1-10-9z' fill='%23d99a9a'/%3E%3Cpath d='M72 70c0-14 8-24 18-24s18 10 18 24' fill='none' stroke='%23b97878' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M90 92c6-8 18-4 14 6-3 6-14 13-14 13s-11-7-14-13c-4-10 8-14 14-6z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#fbf6f3;--card:#fff;--tx:#4a3b3f;--mu:#a8959a;--ac:#d4919a;--ac2:#f6e3e1;--sg:#9fb5a0;--sg2:#e8efe6;--bd:#f1e6e3;--sh:0 6px 24px rgba(180,120,125,.08);--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+@media(prefers-color-scheme:dark){:root{--bg:#221c1e;--card:#2d2528;--tx:#f3e7e8;--mu:#a89497;--ac:#e2a5ad;--ac2:#3e3034;--sg:#a9c2aa;--sg2:#33403a;--bd:#3a3034;--sh:0 6px 24px rgba(0,0,0,.25)}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--tx);padding-bottom:100px}
+header{position:sticky;top:0;z-index:5;padding:calc(env(safe-area-inset-top) + 22px) 24px 12px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:flex;align-items:flex-end;justify-content:space-between}
+h1{margin:0;font:400 34px/1.1 var(--serif);letter-spacing:-.3px}.sub{color:var(--mu);font-size:13px;margin-top:4px;letter-spacing:.2px}
+.shr{border:0;background:var(--ac2);color:var(--ac);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;cursor:pointer}
+main{padding:4px 18px}.card{background:var(--card);border-radius:26px;margin:16px 0;overflow:hidden;box-shadow:var(--sh)}
+.sh{display:flex;align-items:center;justify-content:space-between;padding:20px 22px 6px}.sh h2{margin:0;font:400 22px var(--serif)}
+.cnt{font-size:13px;color:var(--mu)}.bar{height:4px;background:var(--bd);margin:4px 22px 6px;border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--sg);border-radius:4px;transition:width .4s}
+.ry{font-size:11px;text-transform:uppercase;letter-spacing:1.4px;color:var(--mu);padding:14px 22px 2px}
+.it{display:flex;align-items:center;gap:14px;padding:11px 22px;min-height:54px;cursor:pointer}
+.ck{flex:none;width:24px;height:24px;border-radius:50%;border:1.5px solid var(--ac);display:grid;place-items:center;transition:.25s}
+.it.on .ck{background:var(--sg);border-color:var(--sg)}.it.on .ck:after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2px 2px 0;transform:translateY(-1px) rotate(45deg)}
+.it.on .nm{text-decoration:line-through;color:var(--mu);opacity:.7}.nm{flex:1}.q{font-size:13px;color:var(--mu)}
+.pr{font-size:14px;color:var(--mu);text-align:right;white-space:nowrap}.pr.sp{color:var(--ac)}.pr.sp:before{content:"✿ ";font-size:11px}
+.btn{display:block;width:100%;border:0;border-radius:999px;padding:15px;font-size:15px;background:none;color:var(--mu);margin:8px 0;cursor:pointer}
+.btn.main{background:var(--ac);color:#fff;font-weight:600;box-shadow:0 6px 18px rgba(212,145,154,.35)}
+.day{font-size:11px;letter-spacing:1.6px;color:var(--ac);text-transform:uppercase;padding:22px 22px 0}.rt{font:400 22px/1.25 var(--serif);padding:4px 22px 6px}
+.ing{list-style:none;padding:4px 22px 6px;margin:0;font-size:15px;line-height:1.7}.ing li:before{content:"·";color:var(--ac);margin-right:8px;font-weight:700}
+.st{padding:0 22px 4px 40px;margin:0;font-size:14px;line-height:1.6;color:var(--mu)}
+.acts{display:flex;gap:8px;padding:10px 18px 20px}.acts button{min-height:46px;min-width:46px;border:0;border-radius:999px;font-size:15px;background:var(--bg);color:var(--tx);cursor:pointer}
+.acts .ch{flex:1;background:var(--ac2);color:var(--ac);font-weight:600}.acts .lk.on{background:var(--ac);color:#fff}
+nav{position:fixed;bottom:calc(env(safe-area-inset-bottom) + 14px);left:18px;right:18px;display:flex;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:999px;box-shadow:0 8px 30px rgba(150,100,105,.15);padding:6px}
+nav button{flex:1;border:0;background:none;color:var(--mu);font-size:12px;padding:8px 0;border-radius:999px;cursor:pointer}nav button b{display:block;font-size:18px;font-weight:400;margin-bottom:1px}nav button.on{background:var(--ac2);color:var(--ac);font-weight:600}
+.note{font-size:13px;color:var(--mu);padding:2px 6px;text-align:center}
+details{background:var(--card);border-radius:22px;margin:16px 0;padding:2px 22px;box-shadow:var(--sh)}summary{font-size:14px;color:var(--mu);padding:14px 0;cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:" ⌄";color:var(--ac)}
+details li{margin:6px 0;font-size:14px;line-height:1.5}details ul{padding-left:18px}
+.card details{box-shadow:none;margin:0;padding:0 22px;border-radius:0}.card details summary{padding:8px 0}
+.tag{display:inline-block;background:var(--sg2);color:var(--sg);font-size:12px;border-radius:999px;padding:2px 10px;margin:4px 4px 0 0}.dl{padding:0 22px 2px;font-size:13px;color:var(--ac)}
+.toast{position:fixed;left:50%;bottom:110px;transform:translate(-50%,8px);background:var(--tx);color:var(--bg);padding:11px 20px;border-radius:999px;font-size:14px;opacity:0;transition:.3s;pointer-events:none;white-space:nowrap}.toast.v{opacity:1;transform:translate(-50%,0)}
+</style></head><body>
+<header><div><h1 id="ti">Épicerie</h1><div class="sub">Semaine du 26 oct. au 1<sup>er</sup> nov. 2026</div></div><button type="button" class="shr" onclick="shareApp()" aria-label="Partager l'app"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button></header>
+<main id="m"></main><div class="toast" id="to"></div>
+<nav><button type="button" id="t1" onclick="tab('e')"><b>♡</b>Épicerie</button><button type="button" id="t2" onclick="tab('m')"><b>❀</b>Menus</button><button type="button" id="t3" onclick="tab('p')"><b>☾</b>Prép du dimanche</button></nav>
+<script>
+const SRC="<!DOCTYPE html>\n"+document.documentElement.outerHTML;
+// Prix réels (circulaires du jeu. 22 au mer. 28 oct. 2026, voir semaine-2026-10-26.md). null = prix non vérifié.
+const P={
+// [magasin, prix vérifié (null = non vérifié), 1 = spécial circulaire, note]
+cuisses:["Metro","3,99 $/lb",1,"Cuisses de poulet frais avec dos (rég. 4,99 $)"],
+patates:["IGA","1,88 $ / sac 5 lb",1,"Pommes de terre du Québec 2,27 kg (rég. 3,99 $)"],
+carottes:["IGA","1,88 $ / sac 5 lb",1,"Carottes Compliments 2,27 kg"],
+oignons:["IGA","1,88 $ / sac 5 lb",1,"Oignons jaunes Compliments 2,27 kg"],
+filetPorc:["IGA","3,77 $/lb",1,"Filets de porc frais Olymel"],
+poitrines:["IGA","5,99 $/lb",1,"Poitrines de poulet frais désossées Exceldor"],
+coco:["IGA","1,99 $ / 400 ml",1,"Lait de coco Compliments"],
+soya:["IGA","4,49 $ / 296 ml",1,"Sauce soya Kikkoman (rég. 5,79 $)"],
+hoisin:["IGA","3,79 $ / 445 ml",1,"Sauce hoisin Lee Kum Kee"],
+soupeTomate:["IGA","0,77 $ / 284 ml",1,"Soupe Aylmer · prix membre Scène+"],
+tortillas:["IGA","3,99 $",1,"Tortillas POM 10 ou 12 po"],
+pitas:["IGA","2,49 $ / 225 g",1,"Pains pita Sanabel"],
+fromageTr:["IGA","3,97 $",1,"Kraft Singles 390-410 g"],
+fecule:["IGA","4,99 $ / 454 g",1,"Fécule de maïs Fleischmann's"],
+pouletHache:["IGA","8,99 $ / 454 g",1,"Maple Leaf Prime extra maigre (peu avantageux cette semaine)"],
+spaghetti:["Maxi","0,99 $ / 900 g",1,"Pâtes Sans nom · prix membre PC Optimum · JEUDI 22 et VENDREDI 23 oct. seulement"],
+boeufHache:["Maxi","5,44 $/lb",1,"Bœuf haché maigre format club (rég. 8,49 $)"],
+cotelettes:["Maxi","2,98 $/lb",1,"Côtelettes de longe de porc format Club (rég. 5,50 $)"],
+pilons:["Maxi","6,00 $ / ~850 g",1,"Pilons Maple Leaf Prime"],
+ricotta:["Maxi","6,00 $ / 475 g",1,"Ricotta Tre Stelle"],
+mozza:["Maxi","8,88 $ / 500-700 g",1,"Mozzarellissima Saputo ou râpé Kingsey"],
+fromageRape:["Maxi","5,88 $ / 250-400 g",1,"Fromage râpé PC"],
+parmesan:["Maxi","5,00 $ / 125-200 g",1,"Parmesan Saputo"],
+tourtiereSH:["Maxi","5,88 $ / 550-800 g",1,"Pâté ou tourtière St-Hubert (rég. 9,00 $)"],
+saucisses:["Maxi","1,98 $ / 450 g",1,"Saucisses fumées Lafleur (rég. 5,50 $)"],
+concombres:["Maxi","1,88 $ / 6 mini",1,"Mini concombres Délices du marché"],
+poivrons:["Maxi","4,88 $ / 2,5 lb",1,"Sac « Naturellement imparfaits »"],
+riz:["Maxi","4,49 $ / 907 g",1,"Riz basmati Tilda"],
+bouillon:["Maxi","0,88 $ / 900 ml",1,"Bouillon Sans nom · prix membre PC Optimum"],
+frites:["Maxi","2,25 $ / 800 g",1,"Frites Les Fermes Cavendish"],
+bbq:["Maxi","3,00 $ / 425-500 ml",1,"Bull's-Eye ou Diana"],
+erable:["Maxi","7,88 $ / 540 ml",1,"Sirop d'érable Bernard"],
+oeufs:["Maxi","8,75 $ / 30",1,"Gros œufs blancs Sans nom"],
+cremeSure:["Maxi","2,88 $ / 500 ml",1,"Crème sure Sans nom"],
+farine:["Maxi","2,88 $ / 1 kg",1,"Five Roses ou Robin Hood"],
+celeri:["Metro","2,99 $",1,"Céleri"],
+brocoli:["Metro","2,69 $",1,"Couronne de brocoli (rég. 2,99 $)"],
+chou:["Metro","0,99 $/lb",1,"Chou vert moyen ou plat (rég. 1,99 $)"],
+painsHotdog:["Metro","2,99 $ / 12",1,"Pains Selection · prix membre Moi (3,99 $ sinon)"],
+painsBurger:["Metro","2,99 $ / 12",1,"Pains Selection · prix membre Moi (3,99 $ sinon)"],
+sauceBrune:["Metro","0,75 $",1,"Mélange à sauce Selection 21-52 g"],
+tomates:["Metro","1,44 $ / 540-796 ml",1,"Tomates en dés Selection"],
+macaronis:["Metro","1,44 $ / 475-900 g",1,"Pâtes Selection"],
+lasagnes:["Metro","1,44 $ / 475-900 g",1,"Pâtes Selection — format lasagne à confirmer en magasin"],
+beurre:["Metro","4,88 $ / 454 g",1,"Beurre Selection"],
+laitue:["Metro","3,98 $",1,"Laitues duo Gen V"],
+epaulePorc:["Metro","4,49 $/lb",1,"Épaule de porc de palette désossée"],
+pouletEntier:["Metro","4,99 $/lb",1,"Poulet de grain Mieux-être Naturalia"],
+saucePizza:["Metro","1,99 $ / 213 ml",1,"Sauce à pizza Gattuso"],
+eggrolls:["Costco","9,99 $ (rabais 4 $ jusqu'au 25 oct.)",1,"Pâtés impériaux au porc Minh — Costco Saguenay"],
+fromageGrains:["Maxi",null,0,"Aucun spécial trouvé"],
+cariRouge:["Maxi",null,0,"Pâte de cari rouge douce : peu pour les enfants."],
+sauceBesson:["Chez Besson",null,0,"Salon de la viande : lun.-mer. 8 h 30-17 h 30, jeu.-ven. 8 h 30-19 h, sam. 8 h 30-17 h, FERMÉ le dimanche"]
+};
+const RY={viande:"Viandes",legume:"Fruits et légumes",laitier:"Produits laitiers et œufs",surgele:"Surgelés",epicerie:"Épicerie sèche",boulangerie:"Boulangerie",besson:"Comptoir Besson"};
+// i: [clé, nom, qté, rayon]
+const I=(k,n,q,r)=>({k,n,q,r});
+const R=[
+{id:"cuissesRoties",n:"Cuisses de poulet rôties, patates et carottes",i:[I("cuisses","Cuisses de poulet avec dos","~4,5 kg (≈ 12)","viande"),I("patates","Pommes de terre","5 lb (1 sac)","legume"),I("carottes","Carottes","2 lb","legume"),I("oignons","Oignons","1","legume")],s:["Assaisonner les cuisses (paprika, ail, sel, poivre, filet d'huile)","Patates en quartiers, carottes en bâtonnets et oignon autour, sur 2 plaques","Four 400 °F, 50-55 min, jusqu'à 74 °C à cœur"]},
+{id:"thaiPorc",n:"Sauté thaï doux au porc, lait de coco et riz aux légumes",i:[I("filetPorc","Filets de porc","4 (~2 kg)","viande"),I("coco","Lait de coco","2 boîtes","epicerie"),I("cariRouge","Pâte de cari rouge (doux, facultatif)","1 c. à soupe","epicerie"),I("poivrons","Poivrons","1 sac","legume"),I("brocoli","Brocoli","2","legume"),I("riz","Riz","6 tasses","epicerie"),I("bouillon","Bouillon de poulet","1 L","epicerie"),I("soya","Sauce soya","1","epicerie")],s:["Cuire le riz dans le bouillon","Trancher le porc mince, le saisir à feu vif, réserver","Sauter poivrons et brocoli, ajouter coco, soya et un peu de cari (portion enfants avant le cari), remettre le porc, mijoter 5 min"]},
+{id:"tourtiereSH",n:"Tourtières St-Hubert et crudités",i:[I("tourtiereSH","Tourtières St-Hubert","4","surgele"),I("concombres","Mini concombres","2 paquets","legume"),I("carottes","Carottes","1 lb","legume")],s:["Four 400 °F selon la boîte (≈ 45-60 min)","Couper concombres et carottes en bâtonnets","Servir avec ketchup aux fruits ou betteraves"]},
+{id:"pouletErable",n:"Pilons de poulet à l'érable, grelots et carottes",i:[I("pilons","Pilons de poulet","~3,5 kg (≈ 24)","viande"),I("erable","Sirop d'érable","½ tasse","epicerie"),I("patates","Pommes de terre grelots","6 lb (2 sacs)","legume"),I("carottes","Carottes","2 lb","legume")],s:["Badigeonner les pilons d'érable et d'ail","Grelots entiers et carottes en bâtonnets autour","Four 400 °F, 45 min, retourner à mi-cuisson"]},
+{id:"spaghetti",n:"Spaghetti italien, sauce Besson",i:[I("sauceBesson","Sauce spaghetti Besson","~2 L","besson"),I("spaghetti","Spaghetti","1,8 kg","epicerie"),I("parmesan","Parmesan râpé","1","laitier")],s:["Cuire les pâtes","Réchauffer la sauce Besson","Servir avec parmesan"]},
+{id:"porcRiz",n:"Côtelettes de porc et riz aux légumes",i:[I("cotelettes","Côtelettes de porc","14 (~4 kg)","viande"),I("riz","Riz","6 tasses","epicerie"),I("poivrons","Poivrons","1 sac","legume"),I("brocoli","Brocoli","2","legume"),I("oignons","Oignons","1","legume"),I("soya","Sauce soya","1","epicerie")],s:["Cuire le riz dans le bouillon","Sauter les légumes avec soya, mélanger au riz","Poêler les côtelettes 4 min/côté"]},
+{id:"nouilles",n:"Nouilles chinoises au poulet + egg rolls",i:[I("pouletHache","Poulet haché","4 × 454 g","viande"),I("lomein","Nouilles lo mein","4 paquets","epicerie"),I("carottes","Carottes","1 lb","legume"),I("celeri","Céleri","1","legume"),I("brocoli","Brocoli","1","legume"),I("soya","Sauce soya","1","epicerie"),I("hoisin","Sauce hoisin","1","epicerie"),I("eggrolls","Pâtés impériaux surgelés","2 boîtes","surgele")],s:["Egg rolls au four selon la boîte","Dorer le poulet, ajouter légumes","Ajouter nouilles cuites, soya et hoisin"]},
+{id:"pilons",n:"Pilons de poulet BBQ et frites (poutine pour qui veut)",i:[I("pilons","Pilons de poulet","~3,5 kg (≈ 24)","viande"),I("bbq","Sauce BBQ","1","epicerie"),I("frites","Frites surgelées","2 sacs","surgele"),I("sauceBrune","Sauce brune (poutine, facultatif)","1 sachet","epicerie"),I("fromageGrains","Fromage en grains (poutine, facultatif)","1 sac","laitier")],s:["Enrober les pilons de sauce BBQ","Four 425 °F, 40 min, retourner à mi-cuisson","Frites au four en même temps; poutine : fromage en grains + sauce brune chaude"]},
+{id:"macaroni",n:"Macaroni au bœuf",i:[I("boeufHache","Bœuf haché","3 lb","viande"),I("macaronis","Macaronis","1,8 kg","epicerie"),I("tomates","Tomates en dés","2 boîtes","epicerie"),I("soupeTomate","Soupe aux tomates","1 boîte","epicerie"),I("oignons","Oignons","2","legume"),I("poivrons","Poivron","1","legume"),I("mozza","Fromage mozzarella","500 g","laitier")],s:["Dorer bœuf et oignons","Ajouter tomates, soupe, poivron, mijoter 15 min","Mélanger aux pâtes, fromage, gratiner"]},
+{id:"lanieres",n:"Lanières de poulet maison et crudités",i:[I("poitrines","Poitrines de poulet","3 kg","viande"),I("oeufs","Œufs","4","laitier"),I("chapelure","Chapelure / flocons de maïs","1 boîte","epicerie"),I("farine","Farine","1 tasse","epicerie"),I("carottes","Carottes","1 lb","legume"),I("concombres","Concombres","3","legume"),I("mielMoutarde","Sauce miel-moutarde","1","epicerie")],s:["Couper en lanières","Farine → œuf → chapelure","Four 425 °F, 20 min, servir avec crudités"]},
+{id:"lasagne",n:"Lasagne à la viande, sauce Besson",i:[I("boeufHache","Bœuf haché","3 lb","viande"),I("sauceBesson","Sauce spaghetti Besson","~2 L","besson"),I("lasagnes","Pâtes à lasagne","2 boîtes","epicerie"),I("ricotta","Ricotta","2 × 475 g","laitier"),I("mozza","Fromage mozzarella","2 sacs (≈ 1,2 kg)","laitier"),I("parmesan","Parmesan","1","laitier")],s:["Dorer le bœuf avec un oignon, ajouter la sauce Besson","Monter 2 plats : pâtes/sauce/ricotta/mozza, finir avec mozza et parmesan","Four 375 °F, 50 min (1 plat pour souper, 1 pour les dîners ou le congélo)"]},
+{id:"poutine",n:"Poutine maison au poulet",i:[I("frites","Frites Cavendish","4 sacs (800 g)","surgele"),I("fromageGrains","Fromage en grains","1 kg","laitier"),I("sauceBrune","Sauce brune","3 sachets","epicerie"),I("poitrines","Poitrines de poulet","1,5 kg","viande")],s:["Frites au four","Poulet grillé en dés","Monter : frites, fromage, poulet, sauce chaude"]},
+{id:"tourtiere",n:"Tourtière",i:[I("porcHache","Porc haché","2 lb","viande"),I("boeufHache","Bœuf haché","2 lb","viande"),I("pateTarte","Pâte à tarte","4 abaisses","surgele"),I("patates","Pommes de terre","2 lb","legume"),I("oignons","Oignons","2","legume")],s:["Cuire viandes, oignons, épices, purée de patates","Remplir 2 tourtières","Four 400 °F, 40 min"]},
+{id:"hotdogs",n:"Hot-dogs et salade de chou",i:[I("saucisses","Saucisses fumées","3 paquets de 450 g","viande"),I("painsHotdog","Pains à hot-dog","2 paquets de 12","boulangerie"),I("chou","Chou vert (salade de chou)","1 gros","legume"),I("carottes","Carottes (salade de chou)","½ lb","legume")],s:["Râper chou et carottes, mayo + vinaigre + sucre (la veille, c'est meilleur)","Saucisses à l'eau 5 min ou au BBQ","Pains toastés; restes de saucisses tranchées dans les lunchs"]},
+{id:"thai",n:"Poulet thaï doux au lait de coco",i:[I("poitrines","Poitrines de poulet","2,5 kg","viande"),I("coco","Lait de coco","3 boîtes","epicerie"),I("cariRouge","Pâte de cari rouge (doux)","1 pot","epicerie"),I("poivrons","Poivrons","1 sac","legume"),I("riz","Riz jasmin","6 tasses","epicerie")],s:["Dorer le poulet en cubes","Ajouter cari (peu pour les enfants), coco, poivrons","Mijoter 15 min, servir sur riz"]},
+{id:"padthai",n:"Pad thaï au poulet",i:[I("poitrines","Poitrines de poulet","2 kg","viande"),I("nouillesRiz","Nouilles de riz","3 paquets","epicerie"),I("sauceThai","Sauce pad thaï","2 pots","epicerie"),I("oeufs","Œufs","6","laitier"),I("carottes","Carottes","1 lb","legume")],s:["Tremper les nouilles","Sauter poulet, carottes, œufs","Ajouter nouilles et sauce"]},
+{id:"pouletGeneral",n:"Poulet général Tao et riz",i:[I("poitrines","Poitrines de poulet","2,5 kg","viande"),I("sauceTao","Sauce général Tao","2 pots","epicerie"),I("fecule","Fécule de maïs","1","epicerie"),I("riz","Riz","6 tasses","epicerie"),I("brocoli","Brocoli","2","legume")],s:["Enrober le poulet de fécule, poêler","Ajouter la sauce","Servir avec riz et brocoli vapeur"]},
+{id:"pouletRoti",n:"Poulet rôti entier, patates pilées",i:[I("pouletEntier","Poulets entiers","2","viande"),I("patates","Pommes de terre","5 lb","legume"),I("beurre","Beurre","1","laitier"),I("carottes","Carottes","2 lb","legume")],s:["Assaisonner, four 375 °F, 1 h 30","Patates pilées au beurre","Carottes vapeur"]},
+{id:"fajitas",n:"Fajitas au poulet",i:[I("poitrines","Poitrines de poulet","2 kg","viande"),I("tortillas","Tortillas","2 paquets","boulangerie"),I("poivrons","Poivrons","1 sac","legume"),I("cremeSure","Crème sure","1","laitier"),I("fromageRape","Fromage râpé","1","laitier")],s:["Lanières de poulet et poivrons à la poêle avec épices","Garnir les tortillas","Crème sure et fromage"]},
+{id:"pouletParm",n:"Poulet parmigiana, spaghetti sauce Besson",i:[I("poitrines","Poitrines de poulet","2 kg","viande"),I("chapelure","Chapelure","1","epicerie"),I("sauceBesson","Sauce spaghetti Besson","~1,5 L","besson"),I("mozza","Fromage mozzarella","500 g","laitier"),I("spaghetti","Spaghetti","900 g","epicerie")],s:["Paner les poitrines, four 20 min","Couvrir de sauce Besson et mozza, gratiner","Servir sur spaghetti"]},
+{id:"pateChinoisPoulet",n:"Pâté chinois au poulet haché",i:[I("pouletHache","Poulet haché","4 × 454 g","viande"),I("mais","Maïs en crème","2 boîtes","epicerie"),I("patates","Pommes de terre","5 lb","legume"),I("oignons","Oignons","1","legume")],s:["Dorer poulet et oignon","Maïs, puis purée","Four 375 °F, 30 min"]},
+{id:"brochettesPoulet",n:"Brochettes de poulet souvlaki et riz",i:[I("poitrines","Poitrines de poulet","2,5 kg","viande"),I("souvlaki","Marinade souvlaki","1","epicerie"),I("riz","Riz","6 tasses","epicerie"),I("tzatziki","Tzatziki","1","laitier"),I("pitas","Pitas","2 paquets","boulangerie")],s:["Mariner le poulet en cubes","Brochettes au four/BBQ 15 min","Riz, pitas et tzatziki"]},
+{id:"pouletCesar",n:"Wraps poulet César",i:[I("poitrines","Poitrines de poulet","2 kg","viande"),I("tortillas","Tortillas","2 paquets","boulangerie"),I("laitue","Laitue romaine","2","legume"),I("cesar","Vinaigrette César","1","epicerie"),I("parmesan","Parmesan","1","laitier")],s:["Griller le poulet, trancher","Mélanger laitue et vinaigrette","Rouler en wraps"]},
+{id:"porcEffiloche",n:"Porc effiloché BBQ en burgers",i:[I("epaulePorc","Épaule de porc","2 kg","viande"),I("bbq","Sauce BBQ","1","epicerie"),I("painsBurger","Pains à burger","2 paquets","boulangerie"),I("chou","Salade de chou","1","legume")],s:["Mijoteuse 8 h avec BBQ","Effilocher","Servir en burgers avec chou"]},
+{id:"filetPorc",n:"Filet de porc à l'érable et riz aux légumes",i:[I("filetPorc","Filets de porc","3","viande"),I("erable","Sirop d'érable","¼ tasse","epicerie"),I("riz","Riz","6 tasses","epicerie"),I("poivrons","Poivrons","1 sac","legume"),I("brocoli","Brocoli","1","legume")],s:["Saisir les filets, badigeonner d'érable","Four 400 °F, 20 min","Riz sauté aux légumes"]},
+{id:"burgers",n:"Burgers de bœuf maison",i:[I("boeufHache","Bœuf haché","3 lb","viande"),I("painsBurger","Pains à burger","2 paquets","boulangerie"),I("fromageTr","Fromage en tranches","1","laitier"),I("frites","Frites surgelées","2 sacs","surgele")],s:["Façonner 12 galettes","Poêle ou BBQ 4 min/côté","Frites au four"]},
+{id:"chiliDoux",n:"Chili doux au bœuf",i:[I("boeufHache","Bœuf haché","3 lb","viande"),I("haricots","Haricots rouges","2 boîtes","epicerie"),I("tomates","Tomates en dés","2 boîtes","epicerie"),I("mais","Maïs en grains","1 boîte","epicerie"),I("fromageRape","Fromage râpé","1","laitier")],s:["Dorer le bœuf","Ajouter le reste, mijoter 30 min","Servir avec fromage"]},
+{id:"sautePoulet",n:"Sauté de poulet teriyaki et riz",i:[I("poitrines","Poitrines de poulet","2,5 kg","viande"),I("teriyaki","Sauce teriyaki","2","epicerie"),I("riz","Riz","6 tasses","epicerie"),I("brocoli","Brocoli","2","legume"),I("carottes","Carottes","1 lb","legume")],s:["Sauter le poulet","Ajouter légumes et teriyaki","Servir sur riz"]},
+{id:"pouletPouletPizza",n:"Pizza maison au poulet",i:[I("pateePizza","Croûtes à pizza","4","boulangerie"),I("poitrines","Poitrines de poulet","1 kg","viande"),I("saucePizza","Sauce à pizza","1","epicerie"),I("mozza","Fromage mozzarella","1 kg","laitier"),I("poivrons","Poivrons","½ sac","legume")],s:["Garnir les croûtes","Four 450 °F, 12 min"]}
+];
+const DAYS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
+const DEF=["cuissesRoties","spaghetti","thaiPorc","tourtiereSH","lasagne","hotdogs","poutine"];
+const STORES=["Maxi","IGA","Metro","Chez Besson","Costco"];
+const KEY="epicerie-v1",WEEK="2026-W43";
+let S=JSON.parse(localStorage.getItem(KEY)||"null")||{wk:WEEK,menu:DEF.slice(),checked:{},like:{},ban:{},tab:"e"};
+// Nouvelle semaine de circulaires : on repart du menu de la semaine, liste et prép décochées (favoris et exclusions conservés)
+if(S.wk!==WEEK){S={wk:WEEK,menu:DEF.slice(),checked:{},prep:{},like:S.like||{},ban:S.ban||{},tab:S.tab||"e"}}
+const save=()=>localStorage.setItem(KEY,JSON.stringify(S));
+// Si une ancienne version a laissé un repas inconnu, on revient au menu par défaut pour ce jour
+if(!Array.isArray(S.menu)||S.menu.length!==7)S.menu=DEF.slice();
+S.menu=S.menu.map((id,d)=>R.some(r=>r.id===id)?id:DEF[d]);S.checked=S.checked||{};S.like=S.like||{};S.ban=S.ban||{};
+const byId=id=>R.find(r=>r.id===id);
+function list(){const m={};S.menu.forEach(id=>byId(id).i.forEach(x=>{const p=P[x.k],st=p?p[0]:"Maxi";const k=x.k;if(!m[k])m[k]={k,n:x.n,r:x.r,st,pr:p&&p[1],sp:p&&p[2],no:p&&p[3],q:[]};m[k].q.push(x.q)}));return Object.values(m)}
+function toast(t){const e=document.getElementById("to");e.textContent=t;e.classList.add("v");clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove("v"),1600)}
+function rE(){const L=list();let h='<button type="button" class="btn main" onclick="shareList()">Partager la liste</button>';
+STORES.forEach(st=>{const its=L.filter(x=>x.st===st);if(!its.length&&st!=="Costco"&&st!=="Metro")return;const d=its.filter(x=>S.checked[x.k]).length;
+h+=`<section class="card" data-store="${st}"><div class="sh"><h2>${st}</h2><span class="cnt">${d}/${its.length}</span></div><div class="bar"><i style="width:${its.length?d/its.length*100:0}%"></i></div>`;
+if(!its.length)h+=`<div class="it"><span class="nm q">${st==='Metro'?'Rien à acheter cette semaine':'Optionnel, rien au menu cette semaine'}</span></div>`;
+Object.keys(RY).forEach(r=>{const g=its.filter(x=>x.r===r);if(!g.length)return;h+=`<div class="ry">${RY[r]}</div>`;
+g.forEach(x=>{h+=`<div class="it${S.checked[x.k]?" on":""}" onclick="ck('${x.k}')"><span class="ck"></span><span class="nm">${x.n}<br><span class="q">${x.q.join(" + ")}</span></span><span class="pr${x.sp?" sp":""}">${x.pr||""}</span></div>`})});h+="<div style='height:12px'></div></section>"});
+const nv=L.filter(x=>!x.pr).map(x=>x.n),nt=L.filter(x=>x.no).map(x=>`<li>${x.n} : ${x.no}</li>`).join("");
+h+=`<details><summary>Détails et prix à confirmer</summary><ul><li>Spéciaux valides du jeu. 22 au mer. 28 oct. Tout acheter d’ici mercredi.</li><li>Spaghetti Sans nom 0,99 $ au Maxi : jeudi 22 et vendredi 23 seulement (PC Optimum).</li><li>✿ = prix vu en circulaire (prix Québec, à confirmer en succursale).</li><li>Chez Besson : fermé le dimanche.</li><li>Metro Plus D. Boutin, 99, 8e Avenue.</li><li>Costco : aubaines Québec jusqu'au 25 oct. (pâtés impériaux Minh 9,99 $). Celles du 26 oct. pas encore publiées.</li>${nv.length?`<li>Prix non vérifiés : ${nv.join(", ")}.</li>`:""}${nt}</ul></details>`;
+h+='<button type="button" class="btn" onclick="reset()">Tout décocher</button>';return h}
+function deals(r){const d=r.i.filter(x=>P[x.k]&&P[x.k][2]);return `<div class="dl">${d.length?"✿ "+d.length+(d.length>1?" spéciaux":" spécial")+" en circulaire":""}</div>`}
+function rM(){let h='<div class="note">Portions doublées, les restes font les lunchs ♡</div>';
+S.menu.forEach((id,d)=>{const r=byId(id);h+=`<section class="card" data-day="${d}"><div class="day">${DAYS[d]}</div><div class="rt">${r.n}</div>${deals(r)}<ul class="ing">${r.i.map(x=>`<li>${x.n} <span class="q">${x.q}</span>${P[x.k]&&P[x.k][2]?` <span style="color:var(--ac);font-size:11px">✿</span>`:""}</li>`).join("")}</ul><details><summary>Préparation</summary><ol class="st">${r.s.map(x=>`<li>${x}</li>`).join("")}</ol></details>
+<div class="acts"><button type="button" class="ch" onclick="chg(${d})">↻ Changer ce repas</button><button type="button" class="lk${S.like[id]?" on":""}" onclick="lk('${id}')" aria-label="Favori">♡</button><button type="button" onclick="ban(${d})" aria-label="Ne plus proposer">✕</button></div></section>`});
+const b=Object.keys(S.ban);if(b.length)h+=`<div class="note">Exclues : ${b.map(i=>byId(i).n).join(", ")} · <a href="#" style="color:var(--ac)" onclick="S.ban={};save();draw();return false">tout réactiver</a></div>`;return h}
+
+const MEAT=["cuisses","pilons","poitrines","pouletHache","boeufHache","porcHache","cotelettes","filetPorc","epaulePorc","pouletEntier","saucisses"];
+const DA=["lun.","mar.","mer.","jeu.","ven.","sam.","dim."];
+function prep(){const use={};S.menu.forEach((id,d)=>byId(id).i.forEach(x=>{(use[x.k]=use[x.k]||{n:x.n,q:[],d:[]});use[x.k].q.push(x.q);if(!use[x.k].d.includes(d))use[x.k].d.push(d)}));
+const T=[],has=k=>use[k],days=ks=>[...new Set(ks.flatMap(k=>use[k]?use[k].d:[]))].sort(),add=(id,o,t,min,ks)=>{const d=days(ks);if(d.length)T.push({id,o,t,min,d})};
+if(has("epaulePorc"))add("mij",0,"Partir le porc effiloché à la mijoteuse (8 h)",5,["epaulePorc"]);
+const tour=S.menu.includes("tourtiere");if(tour)add("tour",1,"Assembler les tourtières et les congeler crues",25,["porcHache"]);
+if(has("riz"))add("riz",2,"Cuire tout le riz de la semaine ("+use.riz.q.join(" + ")+"), refroidir, réfrigérer",25,["riz"]);
+if(has("patates"))add("pat",3,"Peler et couper les pommes de terre ("+use.patates.q.join(" + ")+"), garder dans l'eau au frigo",15,["patates"]);
+["boeufHache","pouletHache"].forEach(k=>{if(!has(k))return;const ds=use[k].d.filter(d=>!(tour&&S.menu[d]==="tourtiere"));if(!ds.length)return;T.push({id:"cuire"+k,o:4,t:"Cuire tout le "+use[k].n.toLowerCase()+" avec un oignon ("+use[k].q.join(" + ")+"), séparer en portions par repas",min:20,d:ds})});
+const L=["oignons","poivrons","celeri","carottes","brocoli"].filter(has);if(L.length)add("leg",5,"Couper les légumes : "+L.map(k=>use[k].n.toLowerCase()).join(", ")+" — un contenant par repas",20,L);
+const po=["poitrines","cuisses","pilons"].filter(has);if(po.length)add("mar",6,"Couper et mariner/assaisonner le poulet ("+po.map(k=>use[k].n.toLowerCase()).join(", ")+") dans des sacs identifiés par jour",15,po);
+const late=MEAT.filter(k=>has(k)&&use[k].d.some(d=>d>=3));if(late.length)T.push({id:"cong",o:7,t:"Portionner et congeler la viande crue pour jeudi à dimanche ("+late.map(k=>use[k].n.toLowerCase()).join(", ")+")",min:10,d:[...new Set(late.flatMap(k=>use[k].d.filter(d=>d>=3)))].sort()});
+const early=MEAT.filter(k=>has(k)&&use[k].d.some(d=>d<=1));if(early.length)T.push({id:"dec",o:8,t:"Mettre au frigo (décongeler) la viande de lundi-mardi : "+early.map(k=>use[k].n.toLowerCase()).join(", "),min:2,d:[...new Set(early.flatMap(k=>use[k].d.filter(d=>d<=1)))].sort()});
+T.push({id:"etq",o:9,t:"Identifier les contenants (jour + repas) et préparer les plats de dîner",min:5,d:[0,1,2,3,4,5,6]});
+return T.sort((a,b)=>a.o-b.o).map(t=>({...t,id:t.id+"|"+S.menu.join(",")}))}
+function rP(){S.prep=S.prep||{};const T=prep(),tot=T.reduce((a,t)=>a+t.min,0),d=T.filter(t=>S.prep[t.id]).length;
+let h=`<section class="card"><div class="sh"><h2>Dimanche · ~${tot} min</h2><span class="cnt">${d}/${T.length}</span></div><div class="bar"><i style="width:${d/T.length*100}%"></i></div>`;
+T.forEach((t,i)=>{h+=`<div class="it${S.prep[t.id]?" on":""}" onclick="pk('${t.id}')"><span class="ck"></span><span class="nm">${i+1}. ${t.t}<br>${t.d.map(x=>`<span class="tag">${DA[x]} ${byId(S.menu[x]).n.split(/[,(]/)[0]}</span>`).join("")}</span><span class="pr">${t.min} min</span></div>`});
+h+=`</section><details><summary>Astuces pour économiser</summary><ul>
+<li><b>Price match au Maxi</b> : apporter la circulaire d'un concurrent (IGA, Metro) — conditions à vérifier en magasin.</li>
+<li><b>Marques maison</b> (Sans nom, Le Choix du Président, Sélection, Compliments) : souvent 20-30 % moins cher.</li>
+<li><b>PC Optimum</b> (Maxi) et <b>Moi</b> (Metro) : activer les offres personnalisées avant l'épicerie.</li>
+<li><b>Commande en ligne et cueillette</b> : moins d'achats impulsifs avec les enfants.</li>
+<li><b>Souper de secours au congélateur</b> (ex. lasagne ou tourtière) pour éviter le resto les soirs rushants.</li>
+<li><b>Bœuf haché</b> : 5,44 $/lb en format club au Maxi (rég. 8,49 $) — en prendre plus et congeler en portions de 1 lb.</li>
+<li><b>Halloween (sam. 31)</b> : hot-dogs prêts en 15 min avant la tournée des bonbons.</li>
+<li><b>Soirées fixes</b> (ex. vendredi poutine, samedi hot-dogs) : moins de décisions, liste plus prévisible.</li></ul></details>`;return h}
+function shareText(){const L=list().filter(x=>!S.checked[x.k]);let t="Épicerie 🛒\n";STORES.forEach(st=>{const g=L.filter(x=>x.st===st);if(!g.length)return;t+=`\n${st}\n`+g.map(x=>`○ ${x.n} (${x.q.join(" + ")})${x.pr?" · "+x.pr:""}`).join("\n")+"\n"});return L.length?t.trim():"Tout est coché ✓"}
+async function copyT(t,m){try{await navigator.clipboard.writeText(t)}catch(e){}toast(m)}
+async function copy(t){try{await navigator.clipboard.writeText(t)}catch(e){const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();document.execCommand("copy");a.remove()}toast("Liste copiée ♡")}
+async function shareList(){const t=shareText();if(navigator.share){try{await navigator.share({title:"Épicerie",text:t});return}catch(e){if(e.name==="AbortError")return}}copy(t)}
+const APP_URL="";// URL publique de l'app (à remplir une fois publiée)
+async function shareApp(){const u=APP_URL||(/^https?:/.test(location.href)?location.href.split("#")[0]:"");if(u){if(navigator.share){try{await navigator.share({title:"Notre épicerie",url:u});return}catch(e){if(e.name==="AbortError")return}}return copyT(u,"Lien copié ♡")}
+const f=new File([SRC],"epicerie.html",{type:"text/html"});if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:"Notre épicerie"});return}catch(e){if(e.name==="AbortError")return}}
+const a=document.createElement("a");a.href=URL.createObjectURL(f);a.download="epicerie.html";a.click();toast("Fichier téléchargé")}
+function pk(k){S.prep=S.prep||{};S.prep[k]=!S.prep[k];save();draw()}
+function draw(){document.getElementById("m").innerHTML=S.tab==="e"?rE():S.tab==="p"?rP():rM();document.getElementById("ti").textContent=S.tab==="e"?"Épicerie":S.tab==="p"?"Prép du dimanche":"Menus";t3.classList.toggle("on",S.tab==="p");t1.classList.toggle("on",S.tab==="e");t2.classList.toggle("on",S.tab==="m")}
+function tab(t){S.tab=t;save();draw();scrollTo(0,0)}
+function ck(k){S.checked[k]=!S.checked[k];save();draw()}
+function reset(){if(confirm("Décocher tous les articles?")){S.checked={};save();draw()}}
+function chg(d){const pool=R.filter(r=>!S.menu.includes(r.id)&&!S.ban[r.id]);if(!pool.length)return toast("Plus de recettes disponibles");
+const fav=pool.filter(r=>S.like[r.id]),src=fav.length&&Math.random()<.5?fav:pool;S.menu[d]=src[Math.floor(Math.random()*src.length)].id;save();draw();toast("Repas changé — liste mise à jour")}
+function lk(id){S.like[id]=!S.like[id];save();draw();toast(S.like[id]?"Ajouté aux favoris":"Retiré des favoris")}
+function ban(d){S.ban[S.menu[d]]=1;delete S.like[S.menu[d]];chg(d)}
+if(location.hash==="#menus")S.tab="m";if(location.hash==="#prep")S.tab="p";if(location.hash==="#epicerie")S.tab="e";
+draw();
+</script></body></html>
