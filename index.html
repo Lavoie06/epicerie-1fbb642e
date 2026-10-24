@@ -246,8 +246,14 @@ const f=new File([SRC],"epicerie.html",{type:"text/html"});if(navigator.canShare
 const a=document.createElement("a");a.href=URL.createObjectURL(f);a.download="epicerie.html";a.click();toast("Fichier téléchargé")}
 const EMAIL="laboucherierenel@mail.grokbot.com";// adresse courriel de Renel pour les notes (à remplir)
 function rN(){return `<section class="card" style="padding:22px"><div class="sl">Pour Renel</div><p class="q" style="margin:6px 0 14px">Ce qui accroche : formats, quantités, repas à changer…</p><textarea id="nt" placeholder="Ex. : j'ai pris un paquet de 30 œufs, 2 de X ça fait pas de sens…" oninput="S.notes=this.value;save()">${(S.notes||"").replace(/</g,"&lt;")}</textarea></section>
-${EMAIL?'<button type="button" class="btn main" onclick="mailNotes()">Envoyer mes notes à Renel</button>':""}<button type="button" class="btn${EMAIL?"":" main"}" onclick="shareNotes()">Partager les notes</button>`}
-function notesBody(){return `${S.notes||"(aucune note)"}\n\n— Envoyé le ${new Date().toLocaleString("fr-CA")}\n\nMenu courant :\n${S.menu.map((id,d)=>DAYS[d]+" : "+byId(id).n).join("\n")}`}
+${EMAIL?'<button type="button" class="btn main" onclick="mailNotes()">Envoyer mes notes à Renel</button>':""}<button type="button" class="btn${EMAIL?"":" main"}" onclick="shareNotes()">Partager les notes</button>
+<section class="card" id="renelc" style="padding:22px"><div class="sl">Renel le boucher</div><p class="q" style="margin:6px 0 10px">« Grrr, ark twaa… Encore toé? Envoye-moé des photos de tes vieilles factures pis tes menus habituels, les repas que ta gang aime. Comme ça tu traîneras moins dans mon magasin… avant de me voler mes barres de chocolat. Heu heu. »</p>
+<textarea id="mh" placeholder="Mes menus habituels : poulet, spaghetti, lasagne…" oninput="S.habit=this.value;save()">${(S.habit||"").replace(/</g,"&lt;")}</textarea>
+${EMAIL?'<button type="button" class="btn main" id="fact" onclick="mailFact()">Envoyer mes factures à Renel</button>':""}</section>`}
+const FSUBJ="Factures pour Renel";
+function factURL(){let b=`Grrr, joins les photos de tes vieilles factures d'épicerie ici (trombone ou 📎).\n\nMes menus habituels / repas que la famille aime :\n${S.habit||"(écris-les ici)"}\n`;b=b.replace(/\r?\n/g,"\r\n");return `mailto:${EMAIL}?subject=${encodeURIComponent(FSUBJ)}&body=${encodeURIComponent(b)}`}
+function mailFact(){location.href=factURL()}
+function notesBody(){return `${S.notes||"(aucune note)"}${S.habit?"\n\nMes menus habituels :\n"+S.habit:""}\n\n— Envoyé le ${new Date().toLocaleString("fr-CA")}\n\nMenu courant :\n${S.menu.map((id,d)=>DAYS[d]+" : "+byId(id).n).join("\n")}`}
 const NSUBJ="Notes épicerie – semaine du 26 oct.";
 function mailURL(){let b=notesBody().replace(/\r?\n/g,"\r\n");const MAX=1800;if(encodeURIComponent(b).length>MAX){while(encodeURIComponent(b).length>MAX-60)b=b.slice(0,-50);b+="…\r\n(notes coupées : utilise « Partager les notes » pour le texte complet)"}return `mailto:${EMAIL}?subject=${encodeURIComponent(NSUBJ)}&body=${encodeURIComponent(b)}`}
 function mailNotes(){location.href=mailURL()}
