@@ -49,75 +49,71 @@ textarea{width:100%;min-height:220px;border:1px solid var(--bd);border-radius:20
 .shopm header,.shopm nav{display:none}.shopm body,body.shopm{padding-bottom:30px}.shopbar{display:flex;justify-content:space-between;align-items:center;padding-top:calc(env(safe-area-inset-top) + 14px)}.shoph{font:400 38px var(--serif);margin:10px 6px 0}
 .big .it{font-size:22px;min-height:76px;padding:16px 22px}.big .ck{width:34px;height:34px}.big .it.on .ck:after{width:9px;height:16px}.big .q{font-size:15px}
 </style></head><body>
-<header><div><h1 id="ti">Épicerie</h1><div class="sub">Semaine du 2 au 8 nov. 2026</div></div><button type="button" class="shr" onclick="shareApp()" aria-label="Partager l'app"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button></header>
+<header><div><h1 id="ti">Épicerie</h1><div class="sub">Semaine du 9 au 15 nov. 2026</div></div><button type="button" class="shr" onclick="shareApp()" aria-label="Partager l'app"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button></header>
 <main id="m"></main><div class="toast" id="to"></div>
 <nav><button type="button" id="t1" onclick="tab('e')"><b>♡</b>Épicerie</button><button type="button" id="t2" onclick="tab('m')"><b>❀</b>Menus</button><button type="button" id="t3" onclick="tab('p')"><b>☾</b>Prép</button><button type="button" id="t4" onclick="tab('n')"><b>✎</b>Notes</button></nav>
 <script>
 const SRC="<!DOCTYPE html>\n"+document.documentElement.outerHTML;
-// Prix réels (circulaires du jeu. 29 oct. au mer. 4 nov. 2026, voir semaine-2026-11-02.md). null = prix non vérifié.
+// Prix réels (circulaires du jeu. 5 nov. au mer. 11 nov. 2026, voir semaine-2026-11-09.md). null = prix non vérifié.
 const P={
 // [magasin, prix vérifié (null = non vérifié), 1 = spécial circulaire, note]
-pilons:["Metro","3,99 $/lb",1,"Pilons de poulet frais, format économique (8,80 $/kg; rég. 4,99 $/lb)"],
-boeufHache:["Metro","5,44 $/lb",1,"Bœuf haché maigre"],
-porcHache:["Metro","2,99 $/lb",1,"Porc haché extra-maigre · vaut la peine d'en congeler"],
-hautsCuisse:["Metro","8,99 $/lb",1,"Hauts de cuisses de poulet frais désossés"],
-jambon:["Metro","7,99 $ / 675 g",1,"Jambon fumé Selection (rég. 13,99 $)"],
-pouletBBQ:["Metro","13,99 $ / 1 kg",1,"Poulet BBQ cuit et chaud — à acheter le jour même, au plus tard mer. 4 nov."],
-cotelettes:["Metro","4,99 $/lb",1,"Côtelettes de porc frais"],
-filetPorc:["Metro","7,99 $ / 550 g",1,"Filet de porc Irrésistible (rég. 9,99 $)"],
-epaulePorc:["Metro","3,99 $/lb",1,"Rôti d'épaule de porc picnic, avec os"],
-saucisses:["Metro","4,00 $ / 450 g",1,"Saucisses fumées Selection"],
-pouletHache:["Metro","7,99 $ / 450 g",1,"Poulet haché extra maigre Mieux-être (rég. 8,99 $)"],
-croquettes:["Metro","5,99 $ / 600-680 g",1,"Portions de poulet panées Flamingo (rég. 14,99 $) · JEUDI 29 oct. au DIMANCHE 1er nov. seulement (8,99 $ ensuite)"],
-patates:["Metro","1,99 $ / sac 5 lb",1,"Pommes de terre (rég. 4,99 $)"],
-carottes:["Metro","0,99 $ / sac 2 lb",1,"Carottes ou oignons jaunes (rég. 1,99 $)"],
-oignons:["Metro","0,99 $ / sac 2 lb",1,"Carottes ou oignons jaunes (rég. 1,99 $)"],
-coco:["Metro","1,99 $ / 400 ml",1,"Lait de coco Lucky Koi (rég. 2,79 $)"],
-sauceTomate:["Metro","2,49 $ / 680 ml",1,"Sauce tomate Selection (rég. 2,89 $)"],
-saucePizza:["Metro","2,49 $ / 680 ml",1,"Sauce tomate Selection, sert de sauce à pizza (rég. 2,89 $)"],
-tortillas:["Metro","5,49 $ / 400-564 g",1,"Tortillas"],
-painTranche:["Metro","3,00 $ / 475 g",1,"Pain tranché (rég. 3,99 $)"],
-laitue:["Metro","3,98 $",1,"Laitue duo Gen V (rég. 4,99 $)"],
+pouletEntier:["Metro","2,49 $/lb",1,"Poulets entiers frais <4,4 lb format écono"],
+croquettes:["Metro","8,99 $ / 550-750 g",1,"Ailes ou poulet pané Flamingo (rég. 16,99 $) · toute la semaine"],
+jambon:["Metro","1,99 $/100 g",1,"Jambon forêt noire Irrésistible Artisan"],
+laitue:["Metro","2,77 $",1,"Laitue duo Gen V (rég. 4,99 $)"],
+farine:["Metro","3,97 $ / 2,5 kg",1,"Farine Robin Hood/Five Roses (rég. 7,49 $)"],
+pizzaSurg:["Metro","3,99 $",1,"Pizza Ristorante croûte mince (rég. 6,99 $)"],
+painsHotdog:["Metro","2,99 $",1,"Pains hot-dog/hamburger Selection"],
+pitas:["Metro","1,99 $",1,"Pita Adonis"],
 tourtiereSH:["Metro",null,0,"Aucun spécial St-Hubert trouvé cette semaine"],
-pateTarte:["Metro","6,99 $ / 1 kg",1,"Pâte à tarte F. Hubert ou Chef Dumas (rég. 7,49 $)"],
-concombres:["Maxi",null,0,"Concombres des Serres Toundra seulement (jamais de mini) · Maxi annonce des concombres anglais à 0,99 $ sans préciser la provenance : prendre seulement si ce sont des Toundra, prix Toundra non vérifié"],
-poivrons:["Maxi","5,00 $ / 4 un.",1,"Poivrons doux Délices du Marché"],
-brocoli:["Maxi","2,49 $",1,"Couronne de brocoli"],
-celeri:["Maxi","3,00 $",1,"Cœurs de céleri"],
-chou:["Maxi","1,00 $",1,"Chou vert"],
-mais:["Maxi","1,55 $ / 341-398 ml",1,"Légumes Géant Vert (maïs en crème ou en grains)"],
-tomates:["Maxi","1,55 $ / 796 ml",1,"Tomates Sans nom"],
-soupeTomate:["Maxi","0,67 $ / 284 ml",1,"Soupe Aylmer (rég. 1,39 $)"],
-bouillon:["Maxi","1,69 $ / 250-900 ml",1,"Bouillon Campbell's"],
-bbq:["Maxi","1,00 $ / 398 ml",1,"Sauce BBQ Bâton Rouge"],
-teriyaki:["Maxi","3,00 $ / 341-380 ml",1,"Sauce VH (teriyaki)"],
-riz:["Maxi","12,99 $ / 8 kg",1,"Riz Mr. Goudas 8 kg · format réserve (des mois de riz)"],
-naan:["Maxi","2,00 $ / 500 g",1,"Naan Santosh"],
-pateePizza:["Maxi","2,50 $ / 500 g",1,"Boules à pizza Jonathan Garnier"],
-frites:["Maxi","2,25 $ / 800 g",1,"Frites Les Fermes Cavendish"],
-pizzaSurg:["Maxi","3,47 $ / 288-410 g",1,"Pizza Dr. Oetker Ristorante ou Casa di Mama (petit format)"],
-mozza:["Maxi","6,00 $ / 500 g",1,"Mozzarellissima Saputo 500 g (ou fromage râpé PC)"],
-fromageRape:["Maxi","6,00 $ / 250-320 g",1,"Fromage râpé PC · le râpé Sans nom 320 g est à 2,99 $ (membre) JEUDI 29 et VENDREDI 30 oct. seulement"],
-fromageTr:["Maxi","3,97 $ / 390-410 g",1,"Kraft Singles"],
-cremeSure:["Maxi","2,89 $ / 500 ml",1,"Crème sure Sealtest"],
-oeufs:["Maxi","8,75 $ / 30",1,"Gros œufs blancs Sans nom"],
-farine:["Maxi","7,00 $ format club",1,"Farine Sans nom format club, certaines variétés"],
-painsBurger:["Maxi","3,50 $ / 8",1,"Petits pains D'Italiano"],
-lait:["IGA",null,0,"Aucun spécial sur le lait 2 L ordinaire · IGA annonce « lait ou lait au chocolat Natrel » à 4,49 $ sans format précisé (à vérifier)"],
-beurre:["IGA","4,77 $ / 454 g",1,"Beurre Compliments (rég. 6,49 $)"],
-macaronis:["IGA","3,79 $ / 900 g",1,"Pâtes Catelli (rég. 4,99 $)"],
-spaghetti:["IGA","3,79 $ / 900 g",1,"Pâtes Catelli (rég. 4,99 $)"],
-lasagnes:["IGA","3,79 $ / 900 g",1,"Pâtes Catelli — format lasagne à confirmer en magasin"],
-soya:["IGA","2,79 $ / 341-380 ml",1,"Sauce soya VH · prix membre Scène+"],
-painsHotdog:["IGA","2,49 $",1,"Pains à hot-dog Compliments"],
-pitas:["IGA","2,49 $",1,"Pains pita Compliments"],
-tzatziki:["IGA","5,49 $ / 255 g",1,"Tzatziki Fontaine Santé"],
-sauceBrune:["IGA","1,66 $ / 57 g",1,"Mélange à sauce St-Hubert"],
-erable:["IGA","8,99 $ / 375 ml",1,"Sirop d'érable Panache (rég. 9,99 $)"],
-eggrolls:["IGA","10,00 $ / 1,03 kg",1,"Pâtés impériaux surgelés Valeur Plus"],
+pateTarte:["Metro",null,0,"Aucun spécial pâte à tarte trouvé cette semaine"],
+patates:["Maxi","1,99 $ / sac 10 lb",1,"Pommes de terre Russet 10 lb (limite 6; rég. ~5 $)"],
+oignons:["Maxi","2,49 $ / 3 lb",1,"Oignons rouges 3 lb"],
+carottes:["Maxi",null,0,"Carottes : prix non vérifié (sac imparfait Maxi ~4 $ à confirmer)"],
+coco:["Maxi",null,0,"Lait de coco : aucun spécial trouvé cette semaine"],
+sauceTomate:["Maxi","1,33 $ / 540-796 ml",1,"Tomates ou légumineuses Unico"],
+saucePizza:["Maxi","1,33 $ / 540-796 ml",1,"Tomates Unico, sert de sauce à pizza"],
+tomates:["Maxi","1,33 $ / 540-796 ml",1,"Tomates Unico 540-796 ml (limite 12)"],
+haricots:["Maxi","1,33 $ / 540-796 ml",1,"Légumineuses Unico 540-796 ml (limite 12)"],
+concombres:["Maxi",null,0,"Concombres des Serres Toundra seulement (jamais de mini) · Maxi annonce des anglais à 1,48 $ sans préciser la provenance : prendre seulement si ce sont des Toundra, prix Toundra non vérifié"],
+poivrons:["Maxi",null,0,"Poivrons : prix non vérifié"],
+brocoli:["Maxi","1,44 $",1,"Couronne de brocoli"],
+celeri:["Maxi",null,0,"Cœurs de céleri : aucun spécial trouvé"],
+chou:["Maxi","0,75 $/lb",1,"Chou vert"],
+mais:["Maxi",null,0,"Maïs en conserve : aucun spécial trouvé"],
+soupeTomate:["Maxi",null,0,"Soupe aux tomates : aucun spécial trouvé"],
+bouillon:["Maxi","1,69 $",1,"Bouillon Campbell's 250-900 ml"],
+bbq:["Maxi","1,69 $ / 398 ml",1,"Sauce St-Hubert 398 ml"],
+teriyaki:["Maxi",null,0,"Sauce VH teriyaki : aucun spécial trouvé"],
+riz:["Maxi","12,88 $ / 8 kg",1,"Riz thaï jasmin Jasmine Gold 8 kg · format réserve"],
+naan:["Maxi",null,0,"Pains naan : aucun spécial trouvé"],
+pateePizza:["Maxi",null,0,"Croûtes ou boules à pizza : prix non vérifié"],
+frites:["IGA","3,99 $",1,"Frites McCain surgelées"],
+mozza:["Maxi","7,79 $ / 600-700 g",1,"Mozzarella Saputo 690-700 g ou râpée Kingsey 600 g (rég. 11 $)"],
+fromageRape:["Maxi","5,47 $ / 320-400 g",1,"P'tit Québec barre/râpé 320-400 g"],
+fromageTr:["Maxi",null,0,"Kraft Singles : aucun spécial Maxi; IGA 6,97 $ format familial possible"],
+cremeSure:["Maxi",null,0,"Crème sure : prix non vérifié"],
+oeufs:["Maxi","2,99 $ / 12",1,"Gros œufs blancs Sans nom (limite 6; après 4,17 $)"],
+painsBurger:["Maxi",null,0,"Petits pains burger : aucun spécial trouvé"],
+lait:["IGA",null,0,"Lait 2 L ordinaire : prix non vérifié (estimé)"],
+beurre:["IGA",null,0,"Beurre : aucun spécial trouvé (Becel Maxi 3,99 $ n'est pas du beurre)"],
+macaronis:["IGA","1,25 $ / 325-454 g",1,"Pâtes Catelli 325-454 g"],
+spaghetti:["IGA","1,25 $ / 325-454 g",1,"Pâtes Catelli 325-454 g"],
+lasagnes:["IGA","1,25 $ / 325-454 g",1,"Pâtes Catelli — format lasagne à confirmer en magasin"],
+soya:["IGA",null,0,"Sauce soya : aucun spécial trouvé"],
+tzatziki:["IGA",null,0,"Tzatziki : aucun spécial trouvé"],
+sauceBrune:["IGA",null,0,"Mélange à sauce St-Hubert : aucun spécial trouvé"],
+erable:["IGA","5,99 $ / 540 ml",1,"Sirop d'érable Beaurivage/Compliments 540 ml · prix membre Scène+"],
+eggrolls:["IGA",null,0,"Pâtés impériaux : aucun spécial trouvé"],
+painTranche:["IGA","3,79 $ / 600 g",1,"Pain tranché Dempster's 600 g"],
+tortillas:["Maxi","3,50 $",1,"Tortillas moyennes (rég. 5 $)"],
 fromageGrains:["Maxi",null,0,"Aucun spécial trouvé"],
 cariRouge:["Maxi",null,0,"Pâte de cari rouge douce : peu pour les enfants."],
 epicesCari:["Maxi",null,0,"Garam masala ou cari doux (souvent déjà au garde-manger) · aucun spécial trouvé"],
+sauceTao:["Maxi",null,0,"Sauce général Tao : prix non vérifié"],
+fecule:["Maxi",null,0,"Fécule de maïs : prix non vérifié"],
+cesar:["Maxi",null,0,"Vinaigrette César : prix non vérifié"],
+mielMoutarde:["Maxi",null,0,"Sauce miel-moutarde : prix non vérifié"],
 sauceBesson:["Chez Besson",null,0,"Salon de la viande : lun.-mer. 8 h 30-17 h 30, jeu.-ven. 8 h 30-19 h, sam. 8 h 30-17 h, FERMÉ le dimanche"]
 };
 const RY={viande:"Viandes",legume:"Fruits et légumes",laitier:"Produits laitiers et œufs",surgele:"Surgelés",epicerie:"Épicerie sèche",boulangerie:"Boulangerie",collation:"Collations",reserve:"Réserves 📦",besson:"Comptoir Besson",maison:"Maison et bébé"};
@@ -141,7 +137,7 @@ const R=[
 {id:"thai",n:"Poulet thaï doux au lait de coco",i:[I("poitrines","Poitrines de poulet","2,5 kg","viande"),I("coco","Lait de coco","3 boîtes","epicerie"),I("cariRouge","Pâte de cari rouge (doux)","1 pot","epicerie"),I("poivrons","Poivrons","1 sac","legume"),I("riz","Riz jasmin","6 tasses","epicerie")],s:["Dorer le poulet en cubes","Ajouter cari (peu pour les enfants), coco, poivrons","Mijoter 15 min, servir sur riz"]},
 {id:"padthai",n:"Pad thaï au poulet",i:[I("poitrines","Poitrines de poulet","2 kg","viande"),I("nouillesRiz","Nouilles de riz","3 paquets","epicerie"),I("sauceThai","Sauce pad thaï","2 pots","epicerie"),I("oeufs","Œufs","6","laitier"),I("carottes","Carottes","1 lb","legume")],s:["Tremper les nouilles","Sauter poulet, carottes, œufs","Ajouter nouilles et sauce"]},
 {id:"pouletGeneral",n:"Poulet général Tao et riz",i:[I("poitrines","Poitrines de poulet","2,5 kg","viande"),I("sauceTao","Sauce général Tao","2 pots","epicerie"),I("fecule","Fécule de maïs","1","epicerie"),I("riz","Riz","6 tasses","epicerie"),I("brocoli","Brocoli","2","legume")],s:["Enrober le poulet de fécule, poêler","Ajouter la sauce","Servir avec riz et brocoli vapeur"]},
-{id:"pouletRoti",n:"Poulet rôti entier, patates pilées",i:[I("pouletEntier","Poulets entiers","2","viande"),I("patates","Pommes de terre","5 lb","legume"),I("beurre","Beurre","1","laitier"),I("carottes","Carottes","2 lb","legume")],s:["Assaisonner, four 375 °F, 1 h 30","Patates pilées au beurre","Carottes vapeur"]},
+{id:"pouletRoti",n:"Poulet rôti entier, patates pilées",i:[I("pouletEntier","Poulets entiers","3","viande"),I("patates","Pommes de terre","10 lb","legume"),I("beurre","Beurre","1","laitier"),I("carottes","Carottes","2 lb","legume")],s:["Assaisonner, four 375 °F, 1 h 30","Patates pilées au beurre","Carottes vapeur"]},
 {id:"fajitas",n:"Fajitas au poulet",i:[I("poitrines","Poitrines de poulet","2 kg","viande"),I("tortillas","Tortillas","2 paquets","boulangerie"),I("poivrons","Poivrons","1 sac","legume"),I("cremeSure","Crème sure","1","laitier"),I("fromageRape","Fromage râpé","1","laitier")],s:["Lanières de poulet et poivrons à la poêle avec épices","Garnir les tortillas","Crème sure et fromage"]},
 {id:"pouletParm",n:"Poulet pané gratiné à la mozzarella, spaghetti sauce Besson",i:[I("poitrines","Poitrines de poulet","2 kg","viande"),I("chapelure","Chapelure","1","epicerie"),I("sauceBesson","Sauce spaghetti Besson","~1,5 L","besson"),I("mozza","Fromage mozzarella","500 g","laitier"),I("spaghetti","Spaghetti","900 g","epicerie")],s:["Paner les poitrines, four 20 min","Couvrir de sauce Besson et mozza, gratiner","Servir sur spaghetti"]},
 {id:"pateChinoisPoulet",n:"Pâté chinois au poulet haché",i:[I("pouletHache","Poulet haché","4 × 454 g","viande"),I("mais","Maïs en crème","2 boîtes","epicerie"),I("patates","Pommes de terre","5 lb","legume"),I("oignons","Oignons","1","legume")],s:["Dorer poulet et oignon","Maïs, puis purée","Four 375 °F, 30 min"]},
@@ -169,9 +165,9 @@ const MEATK=[...new Set(R.flatMap(r=>r.i.filter(x=>x.r==="viande").map(x=>x.k)))
 MEATK.forEach(k=>{if(!(P[k]&&P[k][0]==="Metro"&&P[k][1]))P[k]=["Chez Besson",null,0]});
 const QUICK=["qCroquettes","qQuesadillas","qGrilled","qPizzaSurg","hotdogs","tourtiereSH","flamingoPatates"];
 const DAYS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
-const DEF=["pilons","pateChinois","macChinois","sautePoulet","pouletBeurre","pizzaJambon","flamingoPatates"];
+const DEF=["pouletRoti","spaghetti","fajitas","pouletGeneral","pouletCesar","pouletPouletPizza","qCroquettes"];
 const STORES=["Maxi","IGA","Metro","Chez Besson","Costco"];
-const KEY="epicerie-v1",WEEK="2026-W44";
+const KEY="epicerie-v1",WEEK="2026-W45";
 let S=JSON.parse(localStorage.getItem(KEY)||"null")||{wk:WEEK,menu:DEF.slice(),checked:{},like:{},ban:{},tab:"e"};
 // Nouvelle semaine de circulaires : on repart du menu de la semaine, liste et prép décochées (favoris et exclusions conservés)
 if(S.wk!==WEEK){S={wk:WEEK,menu:DEF.slice(),checked:{},prep:{},like:S.like||{},ban:S.ban||{},tab:S.tab||"e",pantry:S.pantry||{},budget:S.budget,busy:S.busy||{}};Object.keys(S.busy).forEach(d=>{if(S.busy[d]&&!QUICK.includes(S.menu[d])){const q=QUICK.find(id=>!S.menu.includes(id)&&!S.ban[id]);if(q)S.menu[d]=q}})}
@@ -179,37 +175,33 @@ const save=()=>localStorage.setItem(KEY,JSON.stringify(S));
 // Si une ancienne version a laissé un repas inconnu, on revient au menu par défaut pour ce jour
 if(!Array.isArray(S.menu)||S.menu.length!==7)S.menu=DEF.slice();
 S.menu=S.menu.map((id,d)=>R.some(r=>r.id===id)?id:DEF[d]);S.checked=S.checked||{};S.like=S.like||{};S.ban=S.ban||{};S.pantry=S.pantry||{};S.extra=S.extra||[];S.busy=S.busy||{};if(S.budget==null)S.budget=250;S.shop=null;
-const C={filetPorc:{"4 (~2 kg)":31.96,"3":23.97},pilons:30.80,cotelettes:43.99,pouletHache:31.96,boeufHache:{"3 lb":16.32,"2 lb":10.88},poitrines:{"3 kg":46.30,"1,5 kg":23.15,"2,5 kg":38.58,"2 kg":30.86,"1 kg":15.43},hautsCuisse:39.56,jambon:7.99,saucisses:12.00,pouletBBQ:27.98,croquettes:{"4 boîtes (600-680 g)":23.96,"2 boîtes":11.98},painTranche:{"3 pains":9.00,"2 pains":6.00},pizzaSurg:10.41,cuisses:39.5,patates:{"10 lb (2 sacs)":3.98,"5 lb (1 sac)":1.99,"6 lb (2 sacs)":3.98,"2 lb":1.99,"5 lb":1.99},carottes:{"1 lb":.5,"2 lb":.99,"½ lb":.25},oignons:.99,coco:{"2 boîtes":3.98,"3 boîtes":5.97},cariRouge:4.49,epicesCari:3.99,poivrons:5.00,brocoli:{"2":4.98,"1":2.49},riz:12.99,bouillon:1.69,soya:2.79,tourtiereSH:36,concombres:{"2":4.58,"3":6.87},erable:8.99,sauceBesson:{"~2 L":16,"~1,5 L":12},spaghetti:{"1,8 kg":7.58,"900 g":3.79},lomein:11.96,celeri:3.00,hoisin:3.79,eggrolls:20.00,bbq:1.00,frites:{"3 sacs (800 g)":6.75,"2 sacs":4.5,"4 sacs (800 g)":9},sauceBrune:{"1 sachet":1.66,"3 sachets":4.98},fromageGrains:{"1 sac":8.99,"1 kg":17.99},macaronis:7.58,tomates:3.10,soupeTomate:.67,mozza:{"500 g":6,"2 sacs (≈ 1,2 kg)":12,"1 kg":12},oeufs:8.75,chapelure:3.49,farine:7.00,mielMoutarde:3.99,lasagnes:7.58,ricotta:12,porcHache:{"3 lb":8.97,"2 lb":5.98},pateTarte:6.99,painsHotdog:4.98,chou:1.00,nouillesRiz:10.47,sauceThai:9.98,sauceTao:9.98,fecule:4.99,pouletEntier:43.91,beurre:4.77,tortillas:10.98,cremeSure:2.89,fromageRape:6.00,mais:{"3 boîtes (2 en crème + 1 en grains)":4.65,"2 boîtes":3.10,"1 boîte":1.55},souvlaki:4.99,tzatziki:5.49,pitas:4.98,laitue:7.96,cesar:4.49,epaulePorc:17.56,painsBurger:7.00,fromageTr:3.97,haricots:3.38,teriyaki:6.00,pateePizza:10.00,saucePizza:2.49,sauceTomate:2.49,naan:4.00,lait:17.37};
+const C={filetPorc:{"4 (~2 kg)":31.96,"3":23.97},pilons:null,cotelettes:null,pouletHache:null,boeufHache:{"3 lb":null,"2 lb":null},poitrines:{"3 kg":46.30,"1,5 kg":23.15,"2,5 kg":38.58,"2 kg":30.86,"1 kg":15.43},hautsCuisse:null,jambon:7.96,saucisses:null,pouletBBQ:null,croquettes:{"4 boîtes (550-750 g)":35.96,"4 boîtes (600-680 g)":35.96,"2 boîtes":17.98},painTranche:{"3 pains":11.37,"2 pains":7.58},pizzaSurg:11.97,cuisses:null,patates:{"10 lb":1.99,"10 lb (1 sac)":1.99,"10 lb (2 sacs)":3.98,"5 lb (1 sac)":1.99,"5 lb":1.99,"6 lb (2 sacs)":3.98,"2 lb":1.99},carottes:{"1 lb":2,"2 lb":4,"½ lb":1},oignons:2.49,coco:{"2 boîtes":5,"3 boîtes":7.5},cariRouge:4.49,epicesCari:3.99,poivrons:5,brocoli:{"2":2.88,"1":1.44},riz:12.88,bouillon:1.69,soya:3.49,tourtiereSH:36,concombres:{"2":4.58,"3":6.87},erable:5.99,sauceBesson:{"~2 L":16,"~1,5 L":12},spaghetti:{"1,8 kg":6.25,"900 g":2.50},lomein:11.96,celeri:3.00,hoisin:3.79,eggrolls:20.00,bbq:1.69,frites:{"3 sacs (800 g)":11.97,"2 sacs":7.98,"4 sacs (800 g)":15.96},sauceBrune:{"1 sachet":1.66,"3 sachets":4.98},fromageGrains:{"1 sac":8.99,"1 kg":17.99},macaronis:6.25,tomates:2.66,soupeTomate:1.39,mozza:{"700 g":7.79,"500 g":7.79,"2 sacs (≈ 1,2 kg)":15.58,"1 kg":15.58},oeufs:8.97,chapelure:3.49,farine:3.97,mielMoutarde:3.99,lasagnes:6.25,ricotta:12,porcHache:{"3 lb":null,"2 lb":null},pateTarte:6.99,painsHotdog:5.98,chou:2.25,nouillesRiz:10.47,sauceThai:9.98,sauceTao:9.98,fecule:4.99,pouletEntier:{"3":29.88,"2":19.92},beurre:5.49,tortillas:7.00,cremeSure:2.89,fromageRape:5.47,mais:{"3 boîtes (2 en crème + 1 en grains)":4.65,"2 boîtes":3.10,"1 boîte":1.55},souvlaki:4.99,tzatziki:5.49,pitas:3.98,laitue:{"2":5.54,"1":2.77},cesar:4.49,epaulePorc:null,painsBurger:7.00,fromageTr:3.97,haricots:2.66,teriyaki:6.00,pateePizza:10.00,saucePizza:1.33,sauceTomate:1.33,naan:4.00,lait:17.37};
+
 // Articles en un seul format partagé entre recettes (on n'achète qu'un contenant)
 const ONE=new Set(["oeufs","erable","soya","bouillon","riz","cariRouge","farine","fecule","chapelure","beurre","oignons","epicesCari","celeri","poivrons","bbq","hoisin","cremeSure","fromageRape","soupeTomate"]);
 // Déjeuners de la semaine (toujours dans la liste)
 const BASE=[["lait","Lait 2 L","3 × 2 L","laitier"],["painTranche","Pain tranché (déjeuners)","3 pains","boulangerie"],["oeufs","Œufs (déjeuners)","30","laitier"]];
 // Collations et réserves : [clé, magasin, prix, nom, rayon, qté, coût, 📦 vaut la peine de stocker, coché par défaut, note]
 const SNK=[
-["bChipsAhoy","Maxi","2,79 $ / 240-303 g","Biscuits Chips Ahoy! ou Oreo","collation","2 paquets",5.58,1,1,"Limite selon le magasin; se garde des semaines"],
-["bDare","Maxi","2,79 $ / 280-300 g","Biscuits Dare (Suprême, Maxi Fruits, Météo ou Normandie)","collation","2 paquets",5.58,1,1,"Se garde des semaines"],
-["bWhippet","Maxi","2,79 $","Biscuits Whippet","collation","1 boîte",2.79,1,0,""],
-["pattesOurs","Metro","2,49 $ / 168-240 g","Pattes d'ours Dare","collation","2 paquets",4.98,0,1,""],
-["vachon","Maxi","3,00 $ / 250-336 g","Petits gâteaux Vachon","collation","1 boîte",3.00,0,1,""],
-["barresK","Maxi","3,00 $","Carrés Rice Krispies, Pop-Tarts ou Nutri-Grain","collation","2 boîtes",6.00,1,1,""],
-["miniMuffins","Maxi","4,00 $ / 12","Mini muffins Le Choix du Président","collation","1 paquet",4.00,0,0,""],
-["ritz","Maxi","4,50 $ / 280 g","Mini Snak Paks Ritz","collation","1 boîte",4.50,0,0,""],
-["goldfish","IGA","2,49 $","Craquelins Goldfish","collation","2 sacs",4.98,0,0,"Prix membre Scène+"],
-["motts","Metro","2,99 $","Collations aux fruits Mott's Fruitsations","collation","1 boîte",2.99,0,1,""],
-["dole","Maxi","3,50 $ / 4 × 107-123 g","Coupes de fruits Dole","collation","1 paquet",3.50,0,0,""],
-["tubes","Maxi","3,00 $ / 8 × 56 g","Yogourt en tubes Yoplait","collation","2 boîtes",6.00,0,1,""],
-["mandarines","Metro","4,99 $ / 5 lb","Mandarines","collation","1 sac de 5 lb",4.99,0,1,"Rég. 5,99 $"],
-["honeycrisp","Metro","1,99 $/lb","Pommes Honeycrisp du Québec","collation","3 lb",5.97,0,0,""],
-["cerealesK","Maxi","3,50 $ / 250-355 g","Céréales Kellogg's","collation","2 boîtes",7.00,0,0,"Pour les déjeuners"],
-["rCroq","Metro","5,99 $ / 600-680 g","Poulet pané Flamingo de plus (congélo)","reserve","2 boîtes",11.98,1,0,"JEUDI 29 oct. au DIMANCHE 1er nov. seulement"],
-["rPorc","Metro","2,99 $/lb","Porc haché extra-maigre de plus (congélo)","reserve","3 lb",8.97,1,0,""],
-["rBoeuf","Metro","5,44 $/lb","Bœuf haché maigre de plus (congélo)","reserve","3 lb",16.32,1,0,""],
-["rClassico","Metro","2,97 $ / 410-650 ml","Sauce pour pâtes Classico","reserve","2 pots",5.94,1,0,"Rég. 6,29 $ · jeu.-dim. selon une source : acheter au plus tard dim. 1er nov."],
-["rSucre","Maxi","1,99 $ / 2 kg","Sucre Lantic","reserve","2 sacs",3.98,1,0,"Limite de 6 · aussi 1,99 $ à l'IGA (membre Scène+)"],
-["rFarine","Maxi","7,00 $ / 10 kg","Farine tout usage Sans nom","reserve","1 sac",7.00,1,0,""],
-["rHuile","Maxi","7,00 $ / 3 L","Huile végétale Sans nom","reserve","1",7.00,1,0,""],
-["rFromage","Maxi","2,99 $ / 320 g","Fromage râpé Sans nom","reserve","3 sacs",8.97,1,0,"JEUDI 29 et VENDREDI 30 oct. seulement (PC Optimum) · se congèle"],
-["rPapier","Maxi","8,99 $ / 15 = 30 rouleaux","Papier hygiénique Royale","reserve","1",8.99,1,0,""]];
+["bDare","Metro","1,88 $ / 120-280 g","Craquelins Dare/Breton/Maxi Fruits","collation","2 paquets",3.76,1,1,"Prix membre · se garde des semaines"],
+["bChipsAhoy","Maxi",null,"Biscuits Chips Ahoy! ou Oreo","collation","2 paquets",5.58,1,0,"Prix non vérifié cette semaine"],
+["bWhippet","Maxi",null,"Biscuits Whippet","collation","1 boîte",2.79,1,0,""],
+["vachon","IGA","2,67 $","Gâteaux/tartelettes Vachon","collation","1 boîte",2.67,0,1,"Prix membre Scène+"],
+["planters","Maxi","3,99 $ / 200-600 g","Arachides/cajou Planters","collation","1",3.99,1,1,"Se garde"],
+["activia","Metro","5,96 $ / 12×95-100 g","Yogourt Activia 12","collation","1",5.96,0,1,""],
+["oranges","Metro","0,99 $/lb","Oranges Afrique du Sud","collation","3 lb",2.97,0,1,""],
+["miniChristie","Maxi",null,"Mini biscuits Christie","collation","1",3.50,0,0,"Prix à confirmer"],
+["barresK","Maxi",null,"Carrés Rice Krispies, Pop-Tarts ou Nutri-Grain","collation","2 boîtes",6.00,1,0,""],
+["tubes","Maxi",null,"Yogourt en tubes Yoplait","collation","2 boîtes",6.00,0,0,""],
+["rCroq","Metro","8,99 $ / 550-750 g","Poulet pané Flamingo de plus (congélo)","reserve","2 boîtes",17.98,1,0,"Toute la semaine à 8,99 $"],
+["rUnico","Maxi","1,33 $ / 540-796 ml","Tomates ou légumineuses Unico","reserve","4 boîtes",5.32,1,0,"Limite 12"],
+["rFarine","Metro","3,97 $ / 2,5 kg","Farine Robin Hood/Five Roses","reserve","1 sac",3.97,1,0,"Rég. 7,49 $"],
+["rOeufs","Maxi","2,99 $ / 12","Œufs de plus (limite 6)","reserve","2 boîtes",5.98,1,0,"Après limite : 4,17 $"],
+["rVinaigre","Maxi","1,50 $ / 4 L","Vinaigre blanc Sans nom 4 L","reserve","1",1.50,1,0,"Réserve"],
+["rRiz","Maxi","12,88 $ / 8 kg","Riz jasmin de plus (si besoin)","reserve","1",12.88,1,0,"Déjà au menu cette semaine"],
+["rHuile","Maxi",null,"Huile végétale","reserve","1",7.00,1,0,"Prix non vérifié"],
+["rPapier","Maxi",null,"Papier hygiénique","reserve","1",8.99,1,0,""]];
+
 SNK.forEach(([k,st,pr,n,r,q,c,stk,df,no])=>{P[k]=[st,pr,1,no];C[k]=c});
 if(!S.snk){S.snk={};SNK.forEach(x=>{if(x[8])S.snk[x[0]]=1})}
 function snk(k){S.snk[k]=!S.snk[k];if(!S.snk[k])delete S.checked[k];save();draw()}
@@ -249,7 +241,7 @@ g.forEach(x=>{if(x.extra){const id=x.k.slice(1);h+=`<div class="it${S.checked[x.
 const ns=SNK.filter(x=>S.snk[x[0]]).length,sg=(t,f)=>`<div class="ry" style="padding-left:0">${t}</div>`+SNK.filter(f).map(([k,st,pr,n,r,q,c,stk])=>`<div class="it${S.snk[k]?" on":""}" style="padding:8px 0;min-height:44px" onclick="snk('${k}')"><span class="ck"></span><span class="nm">${n}${stk?" 📦":""}<br><span class="q">${st} · ${q}</span></span><span class="pr sp">${pr}</span></div>`).join("");
 h+=`<details class="pan snk"><summary>Collations et réserves${ns?` · ${ns} dans la liste`:""}</summary><p class="q" style="margin:0 0 6px">Coche ce que tu veux : ça s'ajoute à la liste du bon magasin. 📦 = bon prix pour faire des réserves.</p>${sg("Collations sucrées et lunchs",x=>x[4]==="collation")}${sg("Réserves 📦 (garde-manger et congélo)",x=>x[4]==="reserve")}</details>`;
 const nv=L.filter(x=>!x.pr).map(x=>x.n),nt=L.filter(x=>x.no).map(x=>`<li>${x.n} : ${x.no}</li>`).join("");
-h+=`<details><summary>Détails et prix à confirmer</summary><ul><li>Spéciaux valides du jeu. 29 oct. au mer. 4 nov. Tout acheter d’ici mercredi; viandes de jeudi à dimanche au congélateur.</li><li>Attention aux dates : poulet pané Flamingo 5,99 $ au Metro du jeudi 29 oct. au dimanche 1er nov. seulement (8,99 $ ensuite) — l'acheter avant lundi et le garder au congélo pour dimanche 8.</li><li>Fromage râpé Sans nom 2,99 $ au Maxi : jeudi 29 et vendredi 30 seulement (PC Optimum).</li><li>Poulet BBQ cuit Metro 13,99 $ : jusqu'au mer. 4 nov., à acheter le jour même.</li><li>Coût estimé : prix de circulaire × quantités, arrondi. Les montants gris « ≈ » sont des estimations de prix courant au Québec (aucun prix vérifié). Jamais exact.</li><li>✿ = prix vu en circulaire (prix Québec, à confirmer en succursale). 📦 = vaut la peine de faire des réserves.</li><li>Chez Besson : fermé le dimanche.</li><li>Metro Plus D. Boutin, 99, 8e Avenue.</li><li>Costco : aubaines Québec du 26 oct. au 1er nov. Celles du 2 nov. pas encore publiées. Optionnel.</li>${nv.length?`<li>Prix non vérifiés : ${nv.join(", ")}.</li>`:""}${nt}</ul></details>`;
+h+=`<details><summary>Détails et prix à confirmer</summary><ul><li>Spéciaux valides du jeu. 5 nov. au mer. 11 nov. Tout acheter d’ici mercredi le 11; viandes au congélateur au besoin.</li><li>Poulet pané Flamingo 8,99 $ au Metro toute la semaine (rég. 16,99 $).</li><li>Pas de piège de dates sur le fromage cette semaine (P'tit Québec 5,47 $ au Maxi).</li><li>Aucun poulet BBQ cuit au menu cette semaine.</li><li>Coût estimé : prix de circulaire × quantités, arrondi. Les montants gris « ≈ » sont des estimations de prix courant au Québec (aucun prix vérifié). Jamais exact.</li><li>✿ = prix vu en circulaire (prix Québec, à confirmer en succursale). 📦 = vaut la peine de faire des réserves.</li><li>Chez Besson : fermé le dimanche.</li><li>Metro Plus D. Boutin, 99, 8e Avenue.</li><li>Costco : optionnel, rien au menu cette semaine.</li>${nv.length?`<li>Prix non vérifiés : ${nv.join(", ")}.</li>`:""}${nt}</ul></details>`;
 const np=PANTRY.filter(([k])=>S.pantry[k]).length;h+=`<details class="pan"><summary>Garde-manger${np?` · ${np} déjà à la maison`:""}</summary><p class="q" style="margin:0 0 6px">Coche ce que tu as déjà : ça sort de la liste et du coût.</p>${PANTRY.map(([k,n])=>`<div class="it${S.pantry[k]?" on":""}" style="padding:8px 0;min-height:44px" onclick="pan('${k}')"><span class="ck"></span><span class="nm">${n}</span></div>`).join("")}</details>`;
 h+='<button type="button" class="btn" onclick="reset()">Tout décocher</button>';return h}
 function deals(r){const d=r.i.filter(x=>P[x.k]&&P[x.k][2]);return `<div class="dl">${d.length?"✿ "+d.length+(d.length>1?" spéciaux":" spécial")+" en circulaire":""}</div>`}
@@ -296,10 +288,16 @@ const f=new File([SRC],"epicerie.html",{type:"text/html"});if(navigator.canShare
 const a=document.createElement("a");a.href=URL.createObjectURL(f);a.download="epicerie.html";a.click();toast("Fichier téléchargé")}
 const EMAIL="laboucherierenel@mail.grokbot.com";// adresse courriel de Renel pour les notes (à remplir)
 function rN(){return `<section class="card" style="padding:22px"><div class="sl">Pour Renel</div><p class="q" style="margin:6px 0 14px">Ce qui accroche : formats, quantités, repas à changer…</p><textarea id="nt" placeholder="Ex. : j'ai pris un paquet de 30 œufs, 2 de X ça fait pas de sens…" oninput="S.notes=this.value;svD()" onblur="save()">${(S.notes||"").replace(/</g,"&lt;")}</textarea></section>
-${EMAIL?'<button type="button" class="btn main" onclick="mailNotes()">Envoyer mes notes à Renel</button>':""}<button type="button" class="btn${EMAIL?"":" main"}" onclick="shareNotes()">Partager les notes</button>`}
+${EMAIL?'<button type="button" class="btn main" onclick="mailNotes()">Envoyer mes notes à Renel</button>':""}<button type="button" class="btn${EMAIL?"":" main"}" onclick="shareNotes()">Partager les notes</button>
+<section class="card" id="renelc" style="padding:22px"><div class="sl">Renel le boucher</div><p class="q" style="margin:6px 0 10px">« Grrr, ark twaa… Encore toé? Envoye-moé des photos de tes vieilles factures pis tes menus habituels, les repas que ta gang aime. Comme ça tu traîneras moins dans mon magasin… avant de me voler mes barres de chocolat. Heu heu. »</p>
+<textarea id="mh" placeholder="Mes menus habituels : poulet, spaghetti, lasagne…" oninput="S.habit=this.value;save()">${(S.habit||"").replace(/</g,"&lt;")}</textarea>
+${EMAIL?'<button type="button" class="btn main" id="fact" onclick="mailFact()">Envoyer mes factures à Renel</button>':""}</section>`}
 let _st;function svD(){clearTimeout(_st);_st=setTimeout(save,300)}
+const FSUBJ="Factures pour Renel";
+function factURL(){let b=`Grrr, joins les photos de tes vieilles factures d'épicerie ici (trombone ou 📎).\n\nMes menus habituels / repas que la famille aime :\n${S.habit||"(écris-les ici)"}\n`;b=b.replace(/\r?\n/g,"\r\n");return `mailto:${EMAIL}?subject=${encodeURIComponent(FSUBJ)}&body=${encodeURIComponent(b)}`}
+function mailFact(){location.href=factURL()}
 function notesBody(){return `${S.notes||"(aucune note)"}${S.habit?"\n\nMes menus habituels :\n"+S.habit:""}\n\nNouveauté (${NOV.c}) : ${S.nov==="oui"?"oui, ça me tente":S.nov==="non"?"non merci":"pas encore répondu"}\n\n— Envoyé le ${new Date().toLocaleString("fr-CA")}\n\nMenu courant :\n${S.menu.map((id,d)=>DAYS[d]+" : "+byId(id).n).join("\n")}`}
-const NSUBJ="Notes épicerie – semaine du 2 nov.";
+const NSUBJ="Notes épicerie – semaine du 9 nov.";
 function mailURL(){let b=notesBody().replace(/\r?\n/g,"\r\n");const MAX=1800;if(encodeURIComponent(b).length>MAX){while(encodeURIComponent(b).length>MAX-60)b=b.slice(0,-50);b+="…\r\n(notes coupées : utilise « Partager les notes » pour le texte complet)"}return `mailto:${EMAIL}?subject=${encodeURIComponent(NSUBJ)}&body=${encodeURIComponent(b)}`}
 function mailNotes(){location.href=mailURL()}
 async function shareNotes(){const t=NSUBJ+"\n\n"+notesBody();if(navigator.share){try{await navigator.share({title:NSUBJ,text:t});return}catch(e){if(e.name==="AbortError")return}}copyT(t,"Notes copiées ♡")}
